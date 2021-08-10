@@ -35,7 +35,7 @@ $read = $db->select($query);
                         <td><?php echo $row['Skill']; ?></td>
                         
                         <td>
-                            <a class="btn btn-primary" href="update.php?id=">Edit</a>
+                            <a class="btn btn-primary" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>
                         </td>
                     </tr>
                       

@@ -19,7 +19,7 @@ class Database{
         }
     }
 
-      // Select or Read Database
+      // Select or Read Data
       public function select($query){
         $result = $this->link->query($query)or die($this->link->error.__LINE__);
         if($result->num_rows > 0){
@@ -39,6 +39,17 @@ class Database{
             die("Error :".$this->link->errno.")".$this->link->error);
         }
     }
+
+        // update Data
+        public function update($query){
+            $update_row = $this->link->query($query)or die($this->link->error.__LINE__);
+            if($update_row){
+                header("location:index.php?msg=".urlencode('Data Updated Successfully .'));
+                exit();
+            }else{
+                die("Error: :".$this->link->errno.")".$this->link->error);
+            }
+        }
    
 }
 ?>
