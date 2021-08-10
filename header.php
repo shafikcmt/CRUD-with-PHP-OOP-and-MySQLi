@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>CRUD with PHP OOP and MySQLi</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
