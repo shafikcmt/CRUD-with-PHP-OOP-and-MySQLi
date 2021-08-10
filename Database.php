@@ -19,13 +19,24 @@ class Database{
         }
     }
 
-      // Read Data
+      // Select or Read Database
       public function select($query){
         $result = $this->link->query($query)or die($this->link->error.__LINE__);
         if($result->num_rows > 0){
             return $result;
         }else{
             return false;
+        }
+    }
+
+       // insert Data
+       public function insert($query){
+        $insert_row = $this->link->query($query)or die($this->link->error.__LINE__);
+        if($insert_row){
+            header("location:index.php?msg=".urlencode('Data Successfully Inserted.'));
+            exit();
+        }else{
+            die("Error :".$this->link->errno.")".$this->link->error);
         }
     }
    

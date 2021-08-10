@@ -9,7 +9,11 @@ $query = "SELECT * FROM tbl_user";
 $read = $db->select($query);
 ?>
             <div class="panel-body">
-             
+                 <?php
+                if(isset($_GET['msg'])){
+                    echo "<div class='alert alert-success'>".$_GET['msg']."</div>";  
+                }
+                ?>
                 <table class="table table-striped table-bordered">
                     <tr>
                         <th width="20%">Serial</th>
