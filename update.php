@@ -26,10 +26,11 @@ if(isset($_POST['submit'])){
 }
 ?>
     <?php
-if(isset($_POST['delete'])){
-    $query = "DELETE FROM tbl_user WHERE id =$id";
-    $deleteData = $db->delete($query);
-}
+            // delete Data
+         if(isset($_POST['delete'])){
+            $query = "DELETE FROM tbl_user WHERE id =$id";
+            $deleteData = $db->delete($query);
+         }
     ?>
      
             <div class="panel-body">
@@ -54,6 +55,7 @@ if(isset($_POST['delete'])){
                  </div>
                  <button class="btn btn-success" name="submit" type="submit">Update</button> 
                  <input class="btn btn-danger" type="reset" name="" value="Cancel">
+                 <input type="submit" class="btn btn-danger" name="delete" value="Delete">
                  <a class="btn btn-info" href="index.php">Go Back</a>
               </form>
                   
