@@ -39,14 +39,8 @@ $read = $db->select($query);
                     <?php }else{ ?>
                     <p>Data is not Found!</p>
                     <?php } ?>
-                   
-                    
-                 
-                  
                 </table>
-                
-                        
-                      
+                <a class="btn btn-primary" href="create.php">Create</a>  
             </div>
         </div>
        <?php
